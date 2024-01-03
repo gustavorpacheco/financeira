@@ -1,0 +1,57 @@
+<div class="header">
+  <h2 mat-dialog-title>Cadastrar Cliente</h2>
+</div>
+<mat-dialog-content>
+    <div class="flex-container">
+      <form [formGroup]="form">
+        <div  class="flex">
+          <mat-form-field floatLabel="always" class="input-flex">
+            <mat-label >Nome Cliente</mat-label>
+            <input matInput formControlName="nome" >
+            <mat-error >{{getErroNome()}}</mat-error>
+          </mat-form-field>
+          <mat-form-field floatLabel="always" class="input-flex">
+            <mat-label>Email</mat-label>
+            <input type="email" formControlName="email" matInput placeholder="email@email.com">
+            <mat-error >{{getErroEmail()}}</mat-error>
+          </mat-form-field>
+        </div>
+        <div class="flex">
+          <mat-form-field floatLabel="always" class="input-flex-small">
+            <mat-label>Data Cadastro</mat-label>
+            <input matInput formControlName="dataCadastro"   [max]="maxDate" [matDatepicker]="pickerCadastro" placeholder="dd/mm/yyyy">
+            <mat-datepicker-toggle matIconSuffix [for]="pickerCadastro">
+            </mat-datepicker-toggle>
+            <mat-datepicker #pickerCadastro></mat-datepicker>
+            <mat-error >{{getErroData('dataCadastro')}}</mat-error>
+          </mat-form-field>
+
+          <mat-form-field floatLabel="always" class="input-flex-small">
+            <mat-label>Data Nascimento</mat-label>
+            <input matInput formControlName="dataNascimento" [max]="maxNasc" [matDatepicker]="pickerNascimento"  placeholder="dd/mm/yyyy" >
+            <mat-datepicker-toggle matIconSuffix [for]="pickerNascimento"></mat-datepicker-toggle>
+            <mat-datepicker #pickerNascimento></mat-datepicker>
+            <mat-error >{{getErroData('dataNascimento')}}</mat-error>
+          </mat-form-field>
+        </div>
+        <div class="flex">
+          <mat-form-field floatLabel="always" class="input-flex-small">
+            <mat-label>CPF</mat-label>
+            <input matInput formControlName="cpf" mask="000.000.000-00" placeholder="000.000.000-00">
+            <mat-error >{{getErroCpf()}}</mat-error>
+          </mat-form-field>
+          <mat-form-field floatLabel="always" class="prefix-bottom input-flex-small">
+            <mat-label>Renda Mensal</mat-label>
+            <span matPrefix>&nbsp; R$</span>
+            <input matInput formControlName="renda" mask="separator.2" [leadZero]="true"  [thousandSeparator]="'.'" [decimalMarker]="','"  placeholder="0,00">
+            <mat-error >Campo Obrigatório</mat-error>
+          </mat-form-field>
+        </div>
+      </form>
+    </div>
+</mat-dialog-content>
+<mat-dialog-actions class="buttons-container">
+  <button mat-raised-button color="primary" (click)="salvarCliente()" *ngIf="!edicao" [disabled]="form.invalid">Cadastrar</button>
+  <button mat-raised-button color="primary" (click)="editarCliente()" *ngIf="edicao" [disabled]="form.invalid">Editar</button>
+  <button mat-stroked-button color="primary" (click)="fecharDialog()" >Cancelar</button>
+</mat-dialog-actions>

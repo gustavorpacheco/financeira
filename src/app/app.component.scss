@@ -1,0 +1,28 @@
+.header {
+  background-color: #0A4A5B;
+  display: flex;
+  color: white !important;
+  text-align: center;
+  padding: 1rem 0 1rem 0;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  align-items: center;
+}
+
+.h7 {
+  font-family: Montserrat;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: normal(130%);
+  margin-bottom: 0;
+}
+
+.logo {
+  background-color: white;
+  color: #00586F;
+  border: 1px solid #0A4A5B;
+  border-radius: 35px 0 35px 0;
+  padding: 0.5rem 1rem;
+}

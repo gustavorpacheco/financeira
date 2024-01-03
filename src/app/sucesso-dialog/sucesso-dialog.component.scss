@@ -1,0 +1,23 @@
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+
+  img {
+    margin-bottom: 1rem;
+  }
+
+  p {
+    margin-bottom: 2rem;
+    color: #00586F;
+    font-size: 16px;
+    font-weight: bold;
+
+  }
+
+  button {
+    min-width: 150px;
+  }
+}

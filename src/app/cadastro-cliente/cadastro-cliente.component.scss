@@ -1,0 +1,39 @@
+.flex-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin: auto;
+  flex-direction: column;
+
+  .input-flex {
+    flex: 1 1 45%;
+  }
+
+  .input-flex-small {
+    flex: 1 1 25%;
+  }
+
+  .input-flex-end {
+    flex: 0 1 25%;
+    justify-self: start;
+  }
+}
+
+.header {
+  background-color: #00586F;
+  color: white !important;
+  padding: 1rem 0 ;
+}
+
+
+.flex {
+  display: flex;
+  gap: 1rem;
+}
+
+.buttons-container {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}

@@ -1,0 +1,138 @@
+/* You can add global styles to this file, and also import other style files */
+
+@use '@angular/material' as mat;
+
+@font-face {
+  font-family: Montserrat;
+  src: url(assets/fonts/Montserrat-VariableFont_wght.ttf) format("truetype");
+}
+
+@include mat.core();
+
+$brand-palete: (
+  900: #002C37,
+  700: #0A4A5B,
+  500: #00586F,
+  300: #11728B,
+  100: #7FABB7,
+  contrast: (
+    900: #002C37,
+    700: #002C37,
+    500: #002C37,
+    300: #002C37,
+    100: #002C37,
+  )
+);
+
+$accent-palete: (
+  900: #396C29,
+  700: #5CAC41,
+  500: #73D852,
+  300: #9DE385,
+  100: #C7EFB9,
+  contrast: (
+    900: #002C37,
+    700: #002C37,
+    500: #002C37,
+    300: #002C37,
+    100: #002C37,
+  )
+);
+
+$primary: mat.define-palette($brand-palete, 500, 100, 900);
+$accent: mat.define-palette($accent-palete, 500, 100, 900);
+
+$theme: mat.define-light-theme((
+ color: (
+   primary: $primary,
+   accent: $accent,
+ ),
+ typography: mat.define-typography-config(
+  $font-family: Montserrat,
+ )
+));
+
+@include mat.all-component-themes($theme);
+
+.mdc-text-field--outlined {
+  --mdc-outlined-text-field-container-shape: 28px !important;
+}
+
+html, body { height: 100%;}
+
+
+body { margin: 0; font-family: Montserrat; }
+
+input { font-family: Montserrat !important; }
+
+.m-auto {
+  margin: auto;
+}
+
+.prefix-bottom {
+  .mat-mdc-form-field-icon-prefix {
+    align-self: baseline;
+  }
+}
+
+hr {
+  margin-left: 0;
+  margin-right: 0;
+  border: 1px #0A4A5B solid;
+}
+
+.header .mdc-dialog__title {
+  color: white !important;
+  font-weight: bold !important;
+  font-size: 36px !important;
+  line-height: normal(130%) !important;
+  margin-bottom: 0 !important;
+  font-family: 'Montserrat';
+}
+
+
+ .border-dialog {
+  .mat-mdc-dialog-surface {
+    border-radius: 20px !important;
+  }
+ }
+
+ button {
+  border-radius: 20px !important;
+
+ }
+
+.no-ripple {
+  .mdc-line-ripple {
+   border: none !important;
+ }
+
+ .mdc-line-ripple::before {
+  border: none !important;
+  }
+}
+
+.rounded-border {
+  .mat-mdc-text-field-wrapper {
+    border-radius: 20px;
+  }
+}
+
+.grey-border {
+  .mat-mdc-text-field-wrapper {
+    border: 1px solid #ededed;
+  }
+}
+
+.white-background {
+  .mat-mdc-text-field-wrapper {
+    background-color: white;
+  }
+}
+
+.active-label {
+  mat-label {
+    color: #00586f
+  }
+}
+

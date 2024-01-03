@@ -1,0 +1,54 @@
+table {
+  box-shadow: none;
+  th {
+    background-color: #11728b !important;
+    color: white;
+    padding-left: 2rem;
+  }
+
+  th:first-child {
+    border-radius: 25px 0 0 25px;
+  }
+
+  th:last-child {
+    border-radius: 0 0 50px 0;
+  }
+
+  td {
+    padding-left: 2rem;
+    font-weight: bold;
+  }
+
+  .mdc-data-table__cell {
+    border-bottom: none !important;
+    border-top: none !important;
+  }
+
+  tr {
+    .mat-mdc-cell:first-child {
+      border-radius: 25px 0 0 25px;
+    }
+    .mat-mdc-cell:last-child {
+      border-radius: 0 25px 25px 0;
+    }
+  }
+
+  .mat-mdc-row:nth-child(even){
+    background-color: #f7f7f7;
+
+  }
+
+  mat-icon {
+    cursor: pointer;
+  }
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
