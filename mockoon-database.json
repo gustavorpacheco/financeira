@@ -1,3 +1,181 @@
 {
-
+  "uuid": "9c806f66-7805-4eb6-8c88-fa0647b5575e",
+  "lastMigration": 32,
+  "name": "Mock server ",
+  "endpointPrefix": "",
+  "latency": 0,
+  "port": 3001,
+  "hostname": "",
+  "folders": [],
+  "routes": [
+    {
+      "uuid": "01ba5a4c-e384-43cc-97a1-6dcf983a5df5",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "get-clientes",
+      "responses": [
+        {
+          "uuid": "18477d86-b0d6-4ec0-a950-c7db9f5c149b",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "DATABUCKET",
+          "filePath": "",
+          "databucketID": "h45f",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "5df30bb0-63dd-432b-a5b6-ae67f1aadd78",
+      "type": "http",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "post-cliente",
+      "responses": [
+        {
+          "uuid": "253af3bd-fab2-4157-877c-b88b7ca99c74",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "DATABUCKET",
+          "filePath": "",
+          "databucketID": "h45f",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "ab83faeb-61c5-4f57-8dc4-32a2d8b38418",
+      "type": "crud",
+      "documentation": "",
+      "method": "",
+      "endpoint": "cliente",
+      "responses": [
+        {
+          "uuid": "77d6f38e-7f47-4ee2-b184-75065bfdee70",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "DATABUCKET",
+          "filePath": "",
+          "databucketID": "h45f",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    }
+  ],
+  "rootChildren": [
+    {
+      "type": "route",
+      "uuid": "01ba5a4c-e384-43cc-97a1-6dcf983a5df5"
+    },
+    {
+      "type": "route",
+      "uuid": "5df30bb0-63dd-432b-a5b6-ae67f1aadd78"
+    },
+    {
+      "type": "route",
+      "uuid": "ab83faeb-61c5-4f57-8dc4-32a2d8b38418"
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    },
+    {
+      "key": "Access-Control-Allow-Origin",
+      "value": "*"
+    },
+    {
+      "key": "Access-Control-Allow-Methods",
+      "value": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+    },
+    {
+      "key": "Access-Control-Allow-Headers",
+      "value": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "data": [
+    {
+      "uuid": "5eb9e6d8-23c7-4826-b18a-027d8c15004a",
+      "id": "h45f",
+      "name": "Cliente",
+      "documentation": "",
+      "value": "[\r\n\r\n    {\r\n      \"id\": 1,\r\n      \"nome\": \"Testevaldo\",\r\n      \"cpf\": \"41793977810\",\r\n      \"dataCadastro\": \"2020-01-08\",\r\n      \"renda\": 125.50,\r\n      \"email\": \"testante@teste.com\",\r\n      \"dataNascimento\": \"1993-01-08\"\r\n\r\n    },\r\n    {\r\n      \"id\": 2,\r\n      \"nome\": \"Testevaldo 2\",\r\n      \"cpf\": \"41793977810\",\r\n      \"dataCadastro\": \"2020-01-08\",\r\n      \"renda\": 125.50,\r\n      \"email\": \"testante@teste.com\",\r\n      \"dataNascimento\": \"1993-01-08\"\r\n    },\r\n    {\r\n      \"id\": 3,\r\n      \"nome\": \"Testevaldo 3\",\r\n      \"cpf\": \"41793977810\",\r\n      \"dataCadastro\": \"2020-01-08\",\r\n      \"renda\": 125.50,\r\n      \"email\": \"testante@teste.com\",\r\n      \"dataNascimento\": \"1993-01-08\"\r\n    },\r\n    {\r\n      \"id\": 4,\r\n      \"nome\": \"Testevaldo 4\",\r\n      \"cpf\": \"41793977810\",\r\n      \"dataCadastro\": \"2020-01-08\",\r\n      \"renda\": 125.50,\r\n      \"email\": \"testante@teste.com\",\r\n      \"dataNascimento\": \"1993-01-08\"\r\n    },\r\n    {\r\n      \"id\": 5,\r\n      \"nome\": \"Testevaldo 5\",\r\n      \"cpf\": \"41793977810\",\r\n      \"dataCadastro\": \"2020-01-08\",\r\n      \"renda\": 125.50,\r\n      \"email\": \"testante@teste.com\",\r\n      \"dataNascimento\": \"1993-01-08\"\r\n    },\r\n    {\r\n      \"id\": 6,\r\n      \"nome\": \"Testevaldo 6\",\r\n      \"cpf\": \"41793977810\",\r\n      \"dataCadastro\": \"2020-01-08\",\r\n      \"renda\": 125.50,\r\n      \"email\": \"testante@teste.com\",\r\n      \"dataNascimento\": \"1993-01-08\"\r\n    }\r\n    \r\n]"
+    }
+  ],
+  "callbacks": []
 }
