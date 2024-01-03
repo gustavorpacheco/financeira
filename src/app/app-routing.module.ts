@@ -6,10 +6,6 @@ import { ConsultaClienteComponent } from './consulta-cliente/consulta-cliente.co
 const routes: Routes = [
   {
     path: '',
-    component: CadastroClienteComponent
-  },
-  {
-    path: 'lista-clientes',
     component: ConsultaClienteComponent
   }
 ];
